@@ -1,12 +1,17 @@
 local isQBCore = true -- Set this to false if you are using ESX instead of QBCore
+local isESX = false
 local CoreObject, playerData
+local QBX = exports.qbx_core
 
 if isQBCore then
     CoreObject = exports['qb-core']:GetCoreObject() -- Get the QBCore object
     playerData = CoreObject.Functions.GetPlayerData() -- Fetch player data
-else
+elseif isESX = true then
     ESX = exports["es_extended"]:getSharedObject() -- Get the ESX object using the new method
     playerData = ESX.GetPlayerData() -- Fetch player data
+else
+    --QBX Framework
+    playerdata = QBX.PlayerData
 end
 
 local musicStopped = false -- Flag to control the music stopping logic
