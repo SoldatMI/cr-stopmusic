@@ -6,5 +6,6 @@ description 'Stops all music in interiors (clubs, stores, ambient) and manages c
 version '1.0.0'
 
 client_scripts {
-    'client/main.lua'
+    'client/main.lua',
+    '@qbx_core/modules/playerdata.lua' --comment out if not using QBX
 }
